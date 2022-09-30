@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt_br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,36 +11,71 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Portifólio</title>
 </head>
+
 <body id="body">
-        <div id="cima">
-            <h1>OI MEU NOME É NICOLAS</h1>
-            <img id="minha-foto" src="image/ft.jpeg" alt="Foto minha">
-            <h2>Nicolas Mendes Ferreira da Silva</h2>
-            <p>Sou estudante de engenharia de telecomunicações e aluno do curso de programação do Senac</p>
-        </div>
+    <div id="cima">
+        <h1>OI MEU NOME É NICOLAS</h1>
+        <img id="minha-foto" src="image/ft.jpeg" alt="Foto minha">
+        <h2>Nicolas Mendes Ferreira da Silva</h2>
+        <p>Sou estudante de engenharia de telecomunicações e aluno do curso de programação do Senac</p>
+    </div>
+    <div id="titulo">
         <h3>Oque eu gosto?</h3>
-        <div class="grid">
-            <div class="bloco">
-                <img id="fotos" src="image/Jogos-para-PC.webp" alt="foto dos jogos">
-                <h4>JOGOS</h4>
-            </div>
-            <div class="bloco">
-                <img id="fotos" src="image/onepiece.webp" alt="foto de one piece">
-                <h4>One Piece</h4>
-            </div>
-            <div class="bloco">
-                <img id="fotos" src="image/pesquisa-mercado-de-hardware_2.webp" alt="foto do pc" width="100%">
-                <h4>Computadores</h4>
-            </div>
-            <div class="bloco">
-                <img id="fotos" src="image/WhatsApp Image 2022-09-16 at 09.46.59.jpeg" alt="foto da maya" width="200px">
-                <h4>Maya</h4>
-            </div>
+    </div>
+    <div class="grid">
+        <div class="bloco">
+            <img class="fotos" id="fotos1" src="image/Jogos-para-PC.webp" alt="foto dos jogos">
+            <h4>JOGOS</h4>
         </div>
-        <div id="myModal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="img01">
-            <div id="caption"></div>
-          </div>
+        <div class="bloco">
+            <img class="fotos" id="fotos2" src="image/onepiece.webp" alt="foto de one piece">
+            <h4>One Piece</h4>
+        </div>
+        <div class="bloco">
+            <img class="fotos" id="fotos3" src="image/pesquisa-mercado-de-hardware_2.webp" alt="foto do pc" width="100%">
+            <h4>Computadores</h4>
+        </div>
+        <div class="bloco">
+            <img class="fotos" id="fotos4" src="image/WhatsApp Image 2022-09-16 at 09.46.59.jpeg" alt="foto da maya" width="200px">
+            <h4>Maya</h4>
+        </div>
+    </div>
+    <div class="forms">
+        <h3 id="form-h3">Entre em contato!</h3>
+        <form action="">
+            <Input type="text" id="form" name="nome" placeholder="NOME COMPLETO"></Input> <br>
+            <Input type="email" id="form" name="email" placeholder="E-MAIL"></Input> <br>
+            <Input type="tel" id="form" name="telefone" placeholder="TELEFONE (com DDD)"></Input> <br>
+            <textarea name="mensagem" id="textarea" cols="30" rows="10" placeholder="SUA MENSAGEM"></textarea> <br>
+            <Input type="checkbox" id="checar" name="checar" value="checar"></Input>
+            <label for="checar">Verificar</label>
+            <Input type="submit" onclick="alert('Sua mensagem foi enviada!')" value="Enviar" style="margin-bottom: 20px; margin-top: 10px;"></Input> <br>
+        </form>
+    </div>
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    <br>
+    <br>
+    <script>
+        var modal = document.getElementById('myModal');
+        var img = document.getElementById('fotos1');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
 </body>
+
 </html>
