@@ -5,23 +5,37 @@
     background-position: center;
     text-align: center;
     margin: 0px;
+    font-family: 'Roboto', sans-serif;
 }
 
 #cima{
     background-color: aliceblue;
-    
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    border-radius: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 h1{
-    margin-top: 0px;
+    margin-top: 10px;
+    padding-top: 20px;
 }
 
 #minha-foto{
-    border-radius: 50%;
-    width: 200px;
-    height: 190px;
+    border-radius: 5px;
+    width: 250px;
+    height: 240px;
     margin: auto;
     display: block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 0,4s;
+}
+
+#minha-foto:hover{
+    width: 250px;
+    height: 240px;
+
 }
 
 .grid{
@@ -30,18 +44,30 @@ h1{
     margin-bottom: 10px;
 }
 
-.bloco{
-    flex: 50%;
-    padding: 0 4px;
+h3{
+    background-color: aliceblue;
+    border-radius: 5px;
 }
 
-.bloco img {
-    margin-top: 8px;
-    vertical-align: middle;
-  }
+.bloco{
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 30px;
+    border-radius: 5px;
+
+}
 
 #fotos{
     height: 200px;
-    width: 200px;
-    border-radius: 5%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#fotos:hover{
+    opacity: 0.7;
+}
+
+h4{
+    text-align: center;
+    padding: 10px 20px;
 }
